@@ -4,10 +4,6 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   file_selector_windows
-<<<<<<< HEAD
-=======
-  firebase_core
->>>>>>> c28eecc (Initial commit)
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST
