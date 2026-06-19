@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+=======
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:palengkego/firebase_options.dart';
+>>>>>>> c28eecc (Initial commit)
 import 'package:shared_preferences/shared_preferences.dart';
 import 'core/navigation/app_router.dart';
 import 'core/navigation/app_routes.dart';
@@ -12,7 +20,14 @@ import 'core/services/preferences_provider.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+<<<<<<< HEAD
   // Pre-initialize SharedPreferences so notifiers can read it synchronously.
+=======
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const ProviderScope(child: PalengkeGoApp()));
+>>>>>>> c28eecc (Initial commit)
   final prefs = await SharedPreferences.getInstance();
 
   SystemChrome.setPreferredOrientations([
